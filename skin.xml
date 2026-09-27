@@ -542,7 +542,7 @@
     <eLabel name="SID" position="1551,585" size="60,22" text="SID:" font="Regular; 18" backgroundColor="#102e59" transparent="1" foregroundColor="subtitlecolor" />
     <eLabel text="CPU:" position="1552,612" size="60,22" font="Regular; 18" backgroundColor="#102e59" foregroundColor="subtitlecolor" transparent="1" noWrap="1" />
     <widget source="session.CurrentService" render="Label" position="1617,612" size="70,22" font="Regular; 18" zPosition="99" backgroundColor="#102e59" transparent="1" foregroundColor="subtitlecolor" text="cpu" halign="center" valign="center">
-      <convert type="DreamNextGenInfo_v2">CpuTemp</convert>
+      <convert type="DreamNextGenInfo">CpuTemp</convert>
     </widget>
     <!-- Signal Quality -->
     <eLabel text="SNR:" position="1758,608" size="50,22" font="Regular; 18" backgroundColor="#102e59" foregroundColor="subtitlecolor" transparent="1" />
@@ -558,24 +558,22 @@
   <screen name="infobardng" flags="wfNoBorder" position="0,0" backgroundColor="background">
     <eLabel backgroundColor="background" cornerRadius="10" position="1547,632" size="538,61" zPosition="-1" />
     <widget source="session.CurrentService" render="Label" position="1553,664" size="120,22" font="Regular; 18" zPosition="99" backgroundColor="#102e59" transparent="1" foregroundColor="subtitlecolor" text="RSSI" halign="left" valign="center">
-      <convert type="DreamNextGenInfo_v2">RemoteRSSI</convert>
+      <convert type="DreamNextGenInfo">RemoteRSSI</convert>
     </widget>
     <widget source="session.CurrentService" render="Label" position="1617,638" size="70,22" font="Regular; 18" zPosition="99" backgroundColor="#102e59" transparent="1" foregroundColor="subtitlecolor" text="ddr" halign="center" valign="center">
-      <convert type="DreamNextGenInfo_v2">DDRTemp</convert>
+      <convert type="DreamNextGenInfo">DDRTemp</convert>
     </widget>
     <eLabel text="DDR:" position="1552,638" size="60,22" font="Regular; 18" backgroundColor="#102e59" foregroundColor="subtitlecolor" transparent="1" noWrap="1" />
     <widget source="session.CurrentService" render="Label" position="1760,665" size="94,22" font="Regular; 18" zPosition="99" backgroundColor="#102e59" transparent="1" foregroundColor="subtitlecolor" text="RBat" halign="left" valign="center">
-      <convert type="DreamNextGenInfo_v2">RemoteBattery</convert>
+      <convert type="DreamNextGenInfo">RemoteBattery</convert>
     </widget>
     <widget backgroundColor="background" borderWidth="0" pixmap="/usr/share/enigma2/b4Default-FHD/skin_default/signal.png" position="1680,664" render="Progress" size="32,22" source="session.CurrentService" zPosition="99" foregroundColor="grey" transparent="1">
-      <convert type="DreamNextGenInfo_v2">RemoteRSSI</convert>
-      <convert type="SegmentedProgress">4</convert>
+      <convert type="b4SegmentedInfo">RemoteRSSI,4</convert>
     </widget>
     <eLabel backgroundColor="transparent" position="1857,667" size="36,16" zPosition="99" foregroundColor="transparent" alphatest="on" transparent="1" borderWidth="0" borderColor="grey" />
     <eLabel backgroundColor="grey" position="1893,670" size="5,10" zPosition="99" borderWidth="0" borderColor="grey" />
     <widget source="session.CurrentService" render="Progress" position="1857,668" size="34,14" backgroundColor="transparent" foregroundColor="red,yellow,green,horizontal" borderWidth="1" borderColor="white" zPosition="99" transparent="1">
-      <convert type="DreamNextGenInfo_v2">RemoteBattery</convert>
-      <convert type="SegmentedProgress">10</convert>
+      <convert type="b4SegmentedInfo">RemoteBattery,6</convert>
     </widget>
   </screen>
   <screen name="infobarCI" flags="wfNoBorder" position="0,0" backgroundColor="background">
