@@ -579,36 +579,35 @@
     </widget>
   </screen>
   <screen name="infobarCI" flags="wfNoBorder" position="0,0" backgroundColor="background">
-    <!-- Background CI1 -->
-    <widget source="session.CurrentService" render="FixedLabel" text="" position="1547,723" size="538,37" backgroundColor="background" cornerRadius="10" zPosition="-1">
-      <convert type="b4CaidInfo2">CI1,Short</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <!-- Background CI2 -->
-    <widget source="session.CurrentService" render="FixedLabel" text="" position="1547,753" size="538,42" backgroundColor="background" cornerRadius="10" zPosition="-1">
-      <convert type="b4CaidInfo2">CI2,Short</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <!-- CI 1 -->
-    <widget source="session.CurrentService" render="FixedLabel" text="CI 1:" position="1555,730" size="60,25" font="Regular;22" foregroundColor="subtitlecolor" transparent="1" noWrap="1">
-      <convert type="b4CaidInfo2">CI1,Short</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" position="1620,730" size="265,25" render="Label" font="Regular;22" halign="left" valign="center" transparent="1" zPosition="10">
-      <convert type="b4CaidInfo2">CI1,Short</convert>
-    </widget>
-    <!-- CI 2 -->
-    <widget source="session.CurrentService" render="FixedLabel" text="CI 2:" position="1555,760" size="60,25" font="Regular;22" foregroundColor="subtitlecolor" transparent="1" noWrap="1">
-      <convert type="b4CaidInfo2">CI2,Short</convert>
-      <convert type="ConditionalShowHide" />
-    </widget>
-    <widget source="session.CurrentService" position="1620,760" size="265,25" render="Label" font="Regular;22" halign="left" valign="center" transparent="1" zPosition="10">
-      <convert type="b4CaidInfo2">CI2,Short</convert>
-    </widget>
-  </screen>
+  <!-- Background CI1 -->
+  <widget source="session.CurrentService" render="FixedLabel" text="" position="1547,723" size="538,37" backgroundColor="background" cornerRadius="10" zPosition="-1">
+    <convert type="b4CaidInfo2">CI1,Short</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <!-- Background CI2 -->
+  <widget source="session.CurrentService" render="FixedLabel" text="" position="1547,753" size="538,42" backgroundColor="background" cornerRadius="10" zPosition="-1">
+    <convert type="b4CaidInfo2">CI2,Short</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <!-- CI 1 -->
+  <widget source="session.CurrentService" render="FixedLabel" text="CI 1:" position="1555,730" size="60,25" font="Regular;22" foregroundColor="subtitlecolor" transparent="1" noWrap="1">
+    <convert type="b4CaidInfo2">CI1,Short</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" position="1620,730" size="265,25" render="Label" font="Regular;22" halign="left" valign="center" transparent="1" zPosition="10">
+    <convert type="b4CaidInfo2">CI1,Short</convert>
+  </widget>
+  <!-- CI 2 -->
+  <widget source="session.CurrentService" render="FixedLabel" text="CI 2:" position="1555,760" size="60,25" font="Regular;22" foregroundColor="subtitlecolor" transparent="1" noWrap="1">
+    <convert type="b4CaidInfo2">CI2,Short</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" position="1620,760" size="265,25" render="Label" font="Regular;22" halign="left" valign="center" transparent="1" zPosition="10">
+    <convert type="b4CaidInfo2">CI2,Short</convert>
+  </widget>
+</screen>
   <!-- infobars end -->
   <screen name="About" position="center,170" size="1200,820" title="About">
-    <ePixmap pixmap="/usr/share/enigma2/b4Default-FHD/skin_default/menu.png" position="10,5" size="439,800" zPosition="-1" />
     <ePixmap pixmap="/usr/share/enigma2/b4Default-FHD/menu/info_screen.svg" position="78,80" size="300,300" />
     <ePixmap pixmap="/usr/share/enigma2/b4Default-FHD/skin_default/buttons/green.svg" position="78,600" size="300,70" />
     <eLabel backgroundColor="#1f771f" font="Regular;32" halign="center" position="78,600" foregroundColor="white" shadowColor="black" shadowOffset="-2,-2" size="300,70" text="Translation" transparent="1" valign="center" />
@@ -953,7 +952,7 @@
   <screen name="ChoiceBox" position="center,center" size="840,600" title="Input">
     <widget font="Regular;32" name="text" position="10,10" size="820,40" />
     <widget enableWrapAround="1" name="list" position="0,5" scrollbarMode="showOnDemand" size="830,585" />
-    <applet type="onscreenFinish">
+    <applet type="onLayoutFinish">
 # this should be factored out into some helper code,but currently demonstrates applets.
 from enigma import eSize,ePoint
 
@@ -1477,7 +1476,6 @@ self.instance.move(ePoint((1920-wsizex)/2,(1080-wsizey)/2))
     <widget font="Regular;28" halign="center" name="message" position="20,60" transparent="1" size="660,65" valign="center" />
   </screen>
   <screen name="LanguageSelection" position="center,170" size="1200,820" title="Language selection">
-    <ePixmap pixmap="/usr/share/enigma2/b4Default-FHD/skin_default/menu.png" position="10,5" size="439,800" zPosition="-1" />
     <ePixmap pixmap="/usr/share/enigma2/b4Default-FHD/menu/language_setup.svg" position="78,80" size="300,300" />
     <widget enableWrapAround="1" position="470,5" render="Listbox" scrollbarMode="showOnDemand" size="710,810" source="languages">
       <convert type="TemplatedMultiContent">
@@ -1655,7 +1653,7 @@ self.instance.move(ePoint((1920-wsizex)/2,(1080-wsizey)/2))
     <widget name="QuestionPixmap" pixmap="/usr/share/enigma2/b4Default-FHD/skin_default/icons/input_question.svg" position="20,20" size="100,100" />
     <widget name="InfoPixmap" pixmap="/usr/share/enigma2/b4Default-FHD/skin_default/icons/input_info.svg" position="20,20" size="100,100" />
     <widget enableWrapAround="1" name="list" position="20,160" size="860,300" />
-    <applet type="onscreenFinish">
+    <applet type="onLayoutFinish">
 # this should be factored out into some helper code,but currently demonstrates applets.
 from enigma import eSize,ePoint
 
@@ -2214,7 +2212,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)//2,orgpos.y()))
     <widget enableWrapAround="1" name="list" position="10,10" scrollbarMode="showOnDemand" size="820,225" />
   </screen>
   <screen name="UpdatePluginMenu" position="center,170" size="1200,820" title="Software management">
-    <ePixmap pixmap="/usr/share/enigma2/b4Default-FHD/skin_default/menu.png" position="10,5" scale="stretch" size="439,705" zPosition="-1" />
     <ePixmap pixmap="/usr/share/enigma2/b4Default-FHD/menu/software_manager.svg" position="78,80" size="300,300" />
     <ePixmap pixmap="/usr/share/enigma2/b4Default-FHD/skin_default/buttons/red.svg" position="78,600" size="300,70" />
     <widget backgroundColor="#9f1313" font="Regular;32" halign="center" position="78,600" render="Label" foregroundColor="white" shadowColor="black" shadowOffset="-2,-2" size="300,70" source="key_red" transparent="1" valign="center" zPosition="1" />
@@ -3291,7 +3288,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)//2,orgpos.y()))
     <widget enableWrapAround="1" name="config" position="10,90" scrollbarMode="showOnDemand" size="1180,720" />
   </screen>
   <screen name="MainMenu" position="center,170" size="1200,820" title="MediaCenter Menu">
-    <ePixmap pixmap="/usr/share/enigma2/b4Default-FHD/skin_default/menu.png" position="10,5" size="439,800" zPosition="-1" />
     <widget name="menuIcon" position="78,80" size="300,300" />
     <widget font="Regular;32" halign="center" name="subheader" position="100,540" size="260,220" transparent="1" valign="center" />
     <widget font="Regular;60" halign="center" name="header" position="470,30" size="710,70" />
@@ -3403,7 +3399,6 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)//2,orgpos.y()))
   </screen>
   <!-- MenuSort -->
   <screen name="SortableMenu" position="center,170" size="1200,820" title="Menu Sort">
-    <ePixmap pixmap="/usr/share/enigma2/b4Default-FHD/skin_default/menu.png" position="10,5" size="439,800" zPosition="-1" />
     <ePixmap pixmap="/usr/share/enigma2/b4Default-FHD/menu/system_selection.svg" position="78,80" size="300,300" />
     <widget enableWrapAround="1" font="Regular;36" hiddenColor="#818181" itemHeight="70" name="menu" position="470,20" scrollbarMode="showOnDemand" size="710,700" />
     <ePixmap pixmap="/usr/share/enigma2/b4Default-FHD/skin_default/buttons/blue.svg" position="78,600" size="300,70" />
@@ -4157,12 +4152,11 @@ MultiContentEntryPixmapAlphaTest(pos = (2, 7), size = (40, 40), png = 1),
     </widget>
   </screen>
   <screen name="DeliteGreenPanel" position="315,190" size="1200,780" title="OpenBH Green Panel">
-  <panel name="Button_Small" />
-  <panel name="Button_Small_name" />
-  
-  <!-- Lista wypełnia pozostałą przestrzeń, trzymając się marginesu 40px z każdej strony i 20px od dołu -->
-  <widget source="list" render="Listbox" position="10,90" zPosition="1" size="1180,680" scrollbarMode="showOnDemand" transparent="1">
-    <convert type="TemplatedMultiContent">
+    <panel name="Button_Small" />
+    <panel name="Button_Small_name" />
+    <!-- Lista wypełnia pozostałą przestrzeń, trzymając się marginesu 40px z każdej strony i 20px od dołu -->
+    <widget source="list" render="Listbox" position="10,90" zPosition="1" size="1180,680" scrollbarMode="showOnDemand" transparent="1">
+      <convert type="TemplatedMultiContent">
 				{"template": [
 				MultiContentEntryText(pos = (125, 5), size = (685, 40), font=0, text = 0),
 MultiContentEntryText(pos = (125, 42), size = (685, 32), font=1, text = 1),
@@ -4172,8 +4166,8 @@ MultiContentEntryPixmapAlphaTest(pos = (10, 17), size = (100, 40), png = 2, flag
 "itemHeight": 75
 				}
 			</convert>
-  </widget>
-</screen>
+    </widget>
+  </screen>
   <screen name="DeliteAddons" position="315,190" size="1200,780" title="OpenBh E2 Addons Manager">
     <panel name="Button_Small" />
     <panel name="Button_Small_name" />
