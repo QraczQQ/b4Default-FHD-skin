@@ -581,29 +581,29 @@
   <screen name="infobarCI" flags="wfNoBorder" position="0,0" backgroundColor="background">
   <!-- Background CI1 -->
   <widget source="session.CurrentService" render="FixedLabel" text="" position="1547,723" size="538,37" backgroundColor="background" cornerRadius="10" zPosition="-1">
-    <convert type="b4CaidInfo2">CI1,Short</convert>
+    <convert type="b4InfoCI">CI1,Short</convert>
     <convert type="ConditionalShowHide" />
   </widget>
   <!-- Background CI2 -->
   <widget source="session.CurrentService" render="FixedLabel" text="" position="1547,753" size="538,42" backgroundColor="background" cornerRadius="10" zPosition="-1">
-    <convert type="b4CaidInfo2">CI2,Short</convert>
+    <convert type="b4InfoCI">CI2,Short</convert>
     <convert type="ConditionalShowHide" />
   </widget>
   <!-- CI 1 -->
   <widget source="session.CurrentService" render="FixedLabel" text="CI 1:" position="1555,730" size="60,25" font="Regular;22" foregroundColor="subtitlecolor" transparent="1" noWrap="1">
-    <convert type="b4CaidInfo2">CI1,Short</convert>
+    <convert type="b4InfoCI">CI1,Short</convert>
     <convert type="ConditionalShowHide" />
   </widget>
   <widget source="session.CurrentService" position="1620,730" size="265,25" render="Label" font="Regular;22" halign="left" valign="center" transparent="1" zPosition="10">
-    <convert type="b4CaidInfo2">CI1,Short</convert>
+    <convert type="b4InfoCI">CI1,Short</convert>
   </widget>
   <!-- CI 2 -->
   <widget source="session.CurrentService" render="FixedLabel" text="CI 2:" position="1555,760" size="60,25" font="Regular;22" foregroundColor="subtitlecolor" transparent="1" noWrap="1">
-    <convert type="b4CaidInfo2">CI2,Short</convert>
+    <convert type="b4InfoCI">CI2,Short</convert>
     <convert type="ConditionalShowHide" />
   </widget>
   <widget source="session.CurrentService" position="1620,760" size="265,25" render="Label" font="Regular;22" halign="left" valign="center" transparent="1" zPosition="10">
-    <convert type="b4CaidInfo2">CI2,Short</convert>
+    <convert type="b4InfoCI">CI2,Short</convert>
   </widget>
 </screen>
   <!-- infobars end -->
