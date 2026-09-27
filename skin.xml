@@ -3963,29 +3963,31 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)//2,orgpos.y()))
     <widget font="Regular;32" halign="center" position="400,100" render="Label" size="490,40" source="global.CurrentTime">
       <convert type="ClockToText">Format:%A.%d. %B</convert>
     </widget>
-    <widget name="currenticon" position="495,150" size="300,300" transparent="0" backgroundColor="background" />
-    <widget font="Regular;26" halign="right" position="930,20" render="Label" size="350,35" source="observationtime" />
-    <widget font="Regular;42" halign="right" position="140,200" render="Label" size="300,50" source="currentTemp" />
-    <widget font="Regular;30" halign="right" position="140,270" render="Label" size="300,35" source="feelsliketemp" />
-    <widget font="Regular;30" halign="right" position="40,310" render="Label" size="400,35" source="caption" />
-    <widget font="Regular;35" position="850,200" render="Label" size="430,45" source="condition" />
-    <widget font="Regular;30" position="850,270" render="Label" size="400,35" source="wind_condition" />
-    <widget font="Regular;30" position="850,310" render="Label" size="400,35" source="humidity" />
-    <widget font="Regular;28" halign="center" position="30,460" render="Label" size="228,70" source="weekday1" valign="center" />
-    <widget name="weekday1_icon" position="80,530" size="128,128" transparent="0" backgroundColor="background" />
-    <widget font="Regular;26" halign="center" position="30,670" render="Label" size="228,100" source="weekday1_temp" valign="top" />
-    <widget font="Regular;28" halign="center" position="280,460" render="Label" size="228,70" source="weekday2" valign="center" />
-    <widget name="weekday2_icon" position="330,530" size="128,128" transparent="0" backgroundColor="background" />
-    <widget font="Regular;26" halign="center" position="280,670" render="Label" size="228,100" source="weekday2_temp" valign="top" />
-    <widget font="Regular;28" halign="center" position="530,460" render="Label" size="228,70" source="weekday3" valign="center" />
-    <widget name="weekday3_icon" position="580,530" size="128,128" transparent="0" backgroundColor="background" />
-    <widget font="Regular;26" halign="center" position="530,670" render="Label" size="228,100" source="weekday3_temp" valign="top" />
-    <widget font="Regular;28" halign="center" position="780,460" render="Label" size="228,70" source="weekday4" valign="center" />
-    <widget name="weekday4_icon" position="830,530" size="128,128" transparent="0" backgroundColor="background" />
-    <widget font="Regular;26" halign="center" position="780,670" render="Label" size="228,100" source="weekday4_temp" valign="top" />
-    <widget font="Regular;28" halign="center" position="1030,460" render="Label" size="228,70" source="weekday5" valign="center" />
-    <widget name="weekday5_icon" position="1080,530" size="128,128" transparent="0" backgroundColor="background" />
-    <widget font="Regular;26" halign="center" position="1030,670" render="Label" size="228,100" source="weekday5_temp" valign="top" />
+    <widget alphatest="blend" name="currenticon" position="495,150" size="300,300" transparent="1" zPosition="3" />
+    <widget font="Regular;26" foregroundColor="foreground" halign="right" position="930,20" render="Label" size="350,35" source="observationtime" transparent="1" />
+    <widget font="Regular;24" foregroundColor="foreground" halign="right" position="830,60" render="Label" size="450,35" source="observationpoint" transparent="1" />
+    <widget font="Regular;42" foregroundColor="foreground" halign="right" position="140,200" render="Label" size="300,50" source="currentTemp" transparent="1" />
+    <widget font="Regular;30" foregroundColor="foreground" halign="right" position="140,270" render="Label" size="300,35" source="feelsliketemp" transparent="1" />
+    <widget font="Regular;30" foregroundColor="foreground" halign="right" position="40,310" render="Label" size="400,35" source="caption" transparent="1" />
+    <widget font="Regular;35" foregroundColor="foreground" position="850,200" render="Label" size="430,45" source="condition" transparent="1" />
+    <widget font="Regular;30" foregroundColor="foreground" position="850,270" render="Label" size="400,35" source="wind_condition" transparent="1" />
+    <widget font="Regular;30" foregroundColor="foreground" position="850,310" render="Label" size="400,35" source="humidity" transparent="1" />
+    <widget font="Regular;30" foregroundColor="foreground" halign="center" position="40,160" render="Label" size="1210,270" source="statustext" transparent="1" valign="center" zPosition="2" />
+    <widget font="Regular;28" foregroundColor="foreground" halign="center" position="30,460" render="Label" size="228,70" source="weekday1" transparent="1" valign="center" />
+    <widget alphatest="blend" name="weekday1_icon" position="80,530" size="128,128" transparent="1" zPosition="3" />
+    <widget font="Regular;26" foregroundColor="foreground" halign="center" position="30,670" render="Label" size="228,100" source="weekday1_temp" transparent="1" valign="top" />
+    <widget font="Regular;28" foregroundColor="foreground" halign="center" position="280,460" render="Label" size="228,70" source="weekday2" transparent="1" valign="center" />
+    <widget alphatest="blend" name="weekday2_icon" position="330,530" size="128,128" transparent="1" zPosition="3" />
+    <widget font="Regular;26" foregroundColor="foreground" halign="center" position="280,670" render="Label" size="228,100" source="weekday2_temp" transparent="1" valign="top" />
+    <widget font="Regular;28" foregroundColor="foreground" halign="center" position="530,460" render="Label" size="228,70" source="weekday3" transparent="1" valign="center" />
+    <widget alphatest="blend" name="weekday3_icon" position="580,530" size="128,128" transparent="1" zPosition="3" />
+    <widget font="Regular;26" foregroundColor="foreground" halign="center" position="530,670" render="Label" size="228,100" source="weekday3_temp" transparent="1" valign="top" />
+    <widget font="Regular;28" foregroundColor="foreground" halign="center" position="780,460" render="Label" size="228,70" source="weekday4" transparent="1" valign="center" />
+    <widget alphatest="blend" name="weekday4_icon" position="830,530" size="128,128" transparent="1" zPosition="3" />
+    <widget font="Regular;26" foregroundColor="foreground" halign="center" position="780,670" render="Label" size="228,100" source="weekday4_temp" transparent="1" valign="top" />
+    <widget font="Regular;28" foregroundColor="foreground" halign="center" position="1030,460" render="Label" size="228,70" source="weekday5" transparent="1" valign="center" />
+    <widget alphatest="blend" name="weekday5_icon" position="1080,530" size="128,128" transparent="1" zPosition="3" />
+    <widget font="Regular;26" foregroundColor="foreground" halign="center" position="1030,670" render="Label" size="228,100" source="weekday5_temp" transparent="1" valign="top" />
   </screen>
   <screen name="MSNWeatherPluginEntriesListConfigScreen" position="center,170" size="1200,820" title=" ">
     <panel name="Button_Small" />
@@ -3993,12 +3995,14 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)//2,orgpos.y()))
     <widget font="Regular;36" halign="left" position="10,88" render="Label" size="850,45" source="city" />
     <widget font="Regular;36" halign="left" position="920,88" render="Label" size="150,45" source="degreetype" />
     <eLabel backgroundColor="grey" position="10,140" size="1180,1" />
-    <widget enableWrapAround="1" name="entrylist" position="10,150" scrollbarMode="showOnDemand" size="1180,630" font="Regular; 22" />
+    <widget backgroundColor="background" backgroundColorSelected="#204176b6" enableWrapAround="1" font="Regular;28" foregroundColor="foreground" foregroundColorSelected="foreground" itemHeight="50" name="entrylist" position="10,150" scrollbarMode="showOnDemand" size="1180,535" />
+    <eLabel backgroundColor="grey" position="10,700" size="1180,1" />
+    <widget backgroundColor="background" backgroundColorSelected="#204176b6" font="Regular;28" foregroundColor="foreground" foregroundColorSelected="foreground" itemHeight="50" name="config" position="10,715" scrollbarMode="showNever" separation="500" size="1180,80" />
   </screen>
   <screen name="MSNWeatherPluginEntryConfigScreen" position="center,170" size="1200,820" title=" ">
     <panel name="Button_Small" />
     <panel name="Button_Small_source" />
-    <widget enableWrapAround="1" name="config" position="10,90" scrollbarMode="showOnDemand" size="1180,720" />
+    <widget backgroundColor="background" backgroundColorSelected="#204176b6" enableWrapAround="1" font="Regular;28" foregroundColor="foreground" foregroundColorSelected="foreground" itemHeight="50" name="config" position="10,90" scrollbarMode="showOnDemand" separation="500" size="1180,720" />
   </screen>
   <screen name="MSNWeatherPluginSearch" position="center,170" size="1200,820" title=" ">
     <panel name="2Button" />
