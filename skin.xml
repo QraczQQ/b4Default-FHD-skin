@@ -1419,7 +1419,7 @@ self.instance.move(ePoint((1920-wsizex)/2,(1080-wsizey)/2))
     <panel name="infobartimedate" />
     <panel name="infobarweather" />
     <panel name="infobarsat" />
-    <panel name="infobardng" />
+    <!-- b4SkinApp panel infobardng disabled -->
     <panel name="infobarCI" />
   </screen>
   <screen name="InputDeviceSelection" position="center,170" size="1200,820" title="Select input device">
@@ -4243,6 +4243,19 @@ MultiContentEntryPixmapAlphaTest(pos = (10, 20), size = (80, 80), png = 2),
     <panel name="Button_Small_name" />
     <panel name="BoxInfo" position="0, 0" layout="stack" size="300, 100" />
     <widget name="AboutScrollLabel" font="Regular; 30" position="10,90" size="720,680" zPosition="2" halign="left" backgroundColor="mcolor2" transparent="1" split="1" dividechar=":" colposition="0" />
+  </screen>
+  <screen name="SystemNetworkInfo" size="1200,780" position="315,190" title="Network Information" flags="wfNoBorder">
+    <panel name="Button_Small" />
+    <panel name="Button_Small_name" />
+    <widget name="AboutScrollLabel" font="Regular; 30" position="10,90" size="720,680" zPosition="2" halign="left" backgroundColor="mcolor2" transparent="1" split="1" dividechar=":" colposition="0" scrollbarMode="showOnDemand" />
+    <eLabel position="745,100" size="1,650" zPosition="1" backgroundColor="grey" />
+    <eLabel position="770,120" size="400,230" zPosition="0" backgroundColor="mcolor2" />
+    <widget name="devicepic" pixmaps="/usr/share/enigma2/b4Default-FHD/icons/network_wired.png,/usr/share/enigma2/b4Default-FHD/icons/network_wireless.png" position="795,145" size="48,48" zPosition="2" transparent="1" alphatest="blend" />
+    <widget source="IFtext" render="Label" position="870,135" size="280,40" zPosition="2" font="Regular;28" halign="left" valign="center" foregroundColor="grey" backgroundColor="mcolor2" transparent="1" />
+    <widget source="IF" render="Label" position="870,180" size="280,45" zPosition="2" font="Regular;30" halign="left" valign="center" foregroundColor="blue" backgroundColor="mcolor2" transparent="1" />
+    <eLabel position="795,240" size="350,1" zPosition="1" backgroundColor="grey" />
+    <widget source="Statustext" render="Label" position="870,260" size="150,40" zPosition="2" font="Regular;28" halign="left" valign="center" foregroundColor="grey" backgroundColor="mcolor2" transparent="1" />
+    <widget name="statuspic" pixmaps="/usr/share/enigma2/b4Default-FHD/buttons/button_green.png,/usr/share/enigma2/b4Default-FHD/buttons/button_green_off.png" position="1030,265" size="30,30" zPosition="3" transparent="1" alphatest="blend" />
   </screen>
   <screen name="BoxInfo" position="315,190" flags="wfNoBorder" transparent="0" backgroundColor="transparent" size="1200,780">
     <widget source="session.CurrentService" render="Label" zPosition="6" position="760,230" size="400,26" halign="left" valign="center" font="Regular;22" transparent="1" backgroundColor="background" foregroundColor="white">
